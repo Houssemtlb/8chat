@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible"
+    tools:context=".setProfile">
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="200dp"
+      android:text="SAVE YOUR PROFILE"
+      android:textColor="#2196F3"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/viewuserimage"
+      android:layout_width="130dp"
+      android:layout_height="130dp"
+      android:layout_marginTop="8dp"
+      app:cardCornerRadius="130dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+    <ImageView
+        android:id="@+id/viewuserimageinimageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/avatars" />
+  </androidx.cardview.widget.CardView>
+
+  <EditText
+      android:id="@+id/viewusername"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:hint="enter your name here"
+      android:inputType="textPersonName|textCapWords"
+      android:minHeight="48dp"
+      android:text="Name"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/viewuserimage" />
+
+  <Button
+      android:id="@+id/saveprofile"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="70dp"
+      android:layout_marginTop="3dp"
+      android:layout_marginEnd="70dp"
+      android:backgroundTint="#2196F3"
+      android:text="Button"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/viewusername" />
+
+  <ProgressBar
+      android:id="@+id/progressbarofsetProfile"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/saveprofile" />
+</androidx.constraintlayout.widget.ConstraintLayout>
